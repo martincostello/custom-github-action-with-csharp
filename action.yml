@@ -22,10 +22,6 @@ runs:
       with:
         dotnet-version: '10.0.x'
 
-    - name: Print .NET version
-      shell: pwsh
-      run: dotnet --version
-
     - name: Print greeting
       shell: pwsh
       env:
