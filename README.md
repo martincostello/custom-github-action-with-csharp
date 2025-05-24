@@ -75,8 +75,9 @@ The C# files themselves contain [a shebang][shebang] at the top to indicate they
 #!/usr/bin/env -S ${DOTNET_ROOT}/dotnet run
 ```
 
-This shebang is specific to use in GitHub Actions and uses the `${DOTNET_ROOT}` environment variable to find the version of the
-`dotnet` executable installed by the `actions/setup-dotnet` action so that the correct version is used to execute the file.
+This shebang is specific to use in GitHub Actions and uses the `${DOTNET_ROOT}` environment variable to find the version
+of the `dotnet` executable installed by the [`actions/setup-dotnet` action][setup-dotnet] so that the correct version is
+used to execute the file.
 
 > [!TIP]
 > Ensure that any `.cs` files have executable permissions set so that they can be run directly in a shell on non-Windows platforms.
@@ -88,4 +89,5 @@ This shebang is specific to use in GitHub Actions and uses the `${DOTNET_ROOT}` 
 [demo-talk]: https://youtu.be/98MizuB7i-w "No projects just C# with dotnet run app.cs - YouTube"
 [demo-workflow]: https://github.com/martincostello/custom-github-action-with-csharp/blob/main/.github/workflows/demo.yml
 [github-actions-environment-vars]: https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables "Store information in variables - Default environment variables"
+[setup-dotnet]: https://github.com/actions/setup-dotnet "The setup-dotnet GitHub Action"
 [shebang]: https://en.wikipedia.org/wiki/Shebang_(Unix) "Shebang (Unix)"
