@@ -6,10 +6,9 @@ An example of writing a simple custom GitHub Action with C#.
 
 This repository contains a simple example of a custom GitHub Action written in C#.
 
-It requires at least .NET 10 and uses the [dotnet-cs](https://github.com/DamianEdwards/csrun)
-global tool to run inline C# code.
+It uses the .NET 10 SDK and the [dotnet-cs](https://github.com/DamianEdwards/csrun) global tool to run inline C# code.
 
-See [_No projects just C# with `dotnet run app.cs`_](https://youtu.be/98MizuB7i-w)
+See [📺 _No projects just C# with `dotnet run app.cs`_](https://youtu.be/98MizuB7i-w)
 by [@DamianEdwards](https://github.com/DamianEdwards) for more information.
 
 ## Usage
