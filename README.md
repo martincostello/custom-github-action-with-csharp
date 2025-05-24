@@ -82,6 +82,14 @@ used to execute the file.
 > [!TIP]
 > Ensure that any `.cs` files have executable permissions set so that they can be run directly in a shell on non-Windows platforms.
 
+On Windows, `.cs` files cannot be run directly as shebangs are not supported, so any action would need to be run
+using the `dotnet run` command instead. For example:
+
+```yaml
+- shell: pwsh
+  run: dotnet run (Join-Path $env:GITHUB_ACTION_PATH "roll-dice.cs")
+```
+
 [build-badge]: https://github.com/martincostello/custom-github-action-with-csharp/actions/workflows/test.yml/badge.svg?branch=main&event=push
 [build-status]: https://github.com/martincostello/custom-github-action-with-csharp/actions?query=workflow%3Atest+branch%3Amain+event%3Apush "Continuous Integration for this project"
 [composite-action]: https://docs.github.com/actions/sharing-automations/creating-actions/creating-a-composite-action "Creating a composite action"
