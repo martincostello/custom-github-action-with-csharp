@@ -14,7 +14,7 @@ jobs:
     steps:
 
       - name: Use custom C# action
-        uses: martincostello/custom-github-action-with-csharp@use-cs-files
+        uses: martincostello/custom-github-action-with-csharp@main
         id: csharp
         with:
           who-to-greet: ${{ github.triggering_actor }}
