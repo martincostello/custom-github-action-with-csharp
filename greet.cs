@@ -1,4 +1,4 @@
-#!/usr/bin/dotnet run
+#!/usr/bin/env -S ${DOTNET_ROOT}/dotnet run
 
 var name = args.FirstOrDefault() ?? "World";
 
