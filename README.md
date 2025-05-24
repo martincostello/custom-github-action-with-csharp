@@ -27,7 +27,7 @@ jobs:
       - name: Use custom C# action
         uses: martincostello/custom-github-action-with-csharp@main
         with:
-          who-to-greet: github.triggering_actor
+          who-to-greet: ${{ github.triggering_actor }}
 
       - name: Display dice roll
         env:
