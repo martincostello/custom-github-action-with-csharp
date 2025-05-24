@@ -1,3 +1,5 @@
+name: example
+
 on:
   push:
     branches: [ main ]
