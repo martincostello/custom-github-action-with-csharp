@@ -24,7 +24,7 @@ runs:
 
     - name: Print .NET version
       shell: pwsh
-      run: dotnet --info
+      run: dotnet --version
 
     - name: Print greeting
       shell: pwsh
