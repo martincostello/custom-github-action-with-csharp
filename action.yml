@@ -33,7 +33,7 @@ runs:
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
       run: |
-        echo 'Console.WriteLine($"Hello {(args.FirstOrDefault() ?? "World")}!");' | cs '' "$env:INPUT_WHO_TO_GREET"
+        echo 'Console.WriteLine($"Hello {(args.FirstOrDefault() ?? "World")}!");' | cs '' $env:INPUT_WHO_TO_GREET
 
     - name: Roll a 6-sided die
       id: roll-die

@@ -18,7 +18,7 @@ jobs:
         id: csharp
         uses: ./
         with:
-          who-to-greet: ${{ format('@{0}', github.triggering_actor) }}
+          who-to-greet: ${{ github.triggering_actor }}
 
       - name: Display dice roll
         env:
