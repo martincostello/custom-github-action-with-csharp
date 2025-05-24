@@ -1,4 +1,4 @@
-name: example
+name: demo
 
 on:
   push:
@@ -13,12 +13,9 @@ jobs:
 
     steps:
 
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Use C# action
+      - name: Use custom C# action
+        uses: martincostello/custom-github-action-with-csharp@main
         id: csharp
-        uses: ./
         with:
           who-to-greet: ${{ github.triggering_actor }}
 

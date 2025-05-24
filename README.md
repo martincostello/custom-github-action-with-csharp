@@ -1,5 +1,7 @@
 # Custom GitHub Action with C#
 
+[![Build status][build-badge]][build-status]
+
 An example of writing a simple custom GitHub Action with C#.
 
 ## Introduction
@@ -25,6 +27,7 @@ jobs:
     steps:
       - name: Use custom C# action
         uses: martincostello/custom-github-action-with-csharp@main
+        id: csharp
         with:
           who-to-greet: ${{ github.triggering_actor }}
 
@@ -34,3 +37,6 @@ jobs:
         shell: bash
         run: echo "You rolled $ROLLED"
 ```
+
+[build-badge]: https://github.com/martincostello/custom-github-action-with-csharp/actions/workflows/test.yml/badge.svg?branch=main&event=push
+[build-status]: https://github.com/martincostello/custom-github-action-with-csharp/actions?query=workflow%3Atest+branch%3Amain+event%3Apush "Continuous Integration for this project"

@@ -1,0 +1,29 @@
+name: test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  csharp-action:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use C# action
+        id: csharp
+        uses: ./
+        with:
+          who-to-greet: ${{ github.triggering_actor }}
+
+      - name: Display dice roll
+        env:
+          ROLLED: ${{ steps.csharp.outputs.rolled }}
+        shell: bash
+        run: echo "You rolled $ROLLED"
