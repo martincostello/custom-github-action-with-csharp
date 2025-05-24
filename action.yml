@@ -28,6 +28,8 @@ runs:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
       run: |
         $path = Join-Path $env:GITHUB_ACTION_PATH "greet.cs"
+        ls
+        echo $path
         & $path $env:INPUT_WHO_TO_GREET
 
     - name: Roll a 6-sided die
