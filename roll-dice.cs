@@ -1,4 +1,4 @@
-#!/usr/bin/env -S ${DOTNET_ROOT}/dotnet run
+#!/usr/bin/env dotnet
 
 var path = Environment.GetEnvironmentVariable("GITHUB_OUTPUT") ?? "roll.txt";
 var roll = Random.Shared.Next(1, 7);
