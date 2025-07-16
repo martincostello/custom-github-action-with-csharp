@@ -72,12 +72,8 @@ Finally it executes the relevant C# code file to execute the custom application 
 The C# files themselves contain [a shebang][shebang] at the top to indicate they should be run with the .NET SDK:
 
 ```csharp
-#!/usr/bin/env -S ${DOTNET_ROOT}/dotnet run
+#!/usr/bin/env dotnet
 ```
-
-This shebang is specific to use in GitHub Actions and uses the `${DOTNET_ROOT}` environment variable to find the version
-of the `dotnet` executable installed by the [`actions/setup-dotnet` action][setup-dotnet] so that the correct version is
-used to execute the file.
 
 > [!TIP]
 > Ensure that any `.cs` files have executable permissions set so that they can be run directly in a shell on non-Windows platforms.
